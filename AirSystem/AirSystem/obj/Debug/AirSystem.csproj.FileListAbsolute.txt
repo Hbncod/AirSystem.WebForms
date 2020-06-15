@@ -1,0 +1,14 @@
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.csprojAssemblyReference.cache
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.Properties.Resources.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.csproj.GenerateResource.cache
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.csproj.CoreCompileInputs.cache
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\bin\Debug\AirSystem.exe.config
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\bin\Debug\AirSystem.exe
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\bin\Debug\AirSystem.pdb
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.exe
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.pdb
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.TelaPrincipalAdm.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.TelaPrincipalComum.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.frmLogin.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.ListarUsuarios.resources
