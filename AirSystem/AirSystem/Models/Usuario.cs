@@ -22,7 +22,8 @@ namespace AirSystem.Models
         public string Senha { get; set; }
         public string NomeUsuario { get; set; }
         public bool TipoUsuario { get; set; }
-        public static int contador = 1; 
+
+        private static int contador = 1; 
         public Usuario()
         {
             Id = contador;

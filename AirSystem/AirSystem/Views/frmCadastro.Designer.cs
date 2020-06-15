@@ -106,57 +106,84 @@
             // 
             // txtboxNome
             // 
+            this.txtboxNome.ForeColor = System.Drawing.Color.Silver;
             this.txtboxNome.Location = new System.Drawing.Point(118, 43);
             this.txtboxNome.Name = "txtboxNome";
             this.txtboxNome.Size = new System.Drawing.Size(131, 20);
             this.txtboxNome.TabIndex = 7;
+            this.txtboxNome.Text = "Digite seu nome...";
+            this.txtboxNome.Enter += new System.EventHandler(this.txtboxNome_Enter);
+            this.txtboxNome.Leave += new System.EventHandler(this.txtboxNome_Leave);
             // 
             // txtboxSobrenome
             // 
+            this.txtboxSobrenome.ForeColor = System.Drawing.Color.Silver;
             this.txtboxSobrenome.Location = new System.Drawing.Point(255, 43);
             this.txtboxSobrenome.Name = "txtboxSobrenome";
             this.txtboxSobrenome.Size = new System.Drawing.Size(131, 20);
             this.txtboxSobrenome.TabIndex = 8;
+            this.txtboxSobrenome.Text = "Digite seu sobrenome...";
+            this.txtboxSobrenome.Enter += new System.EventHandler(this.txtboxSobrenome_Enter);
+            this.txtboxSobrenome.Leave += new System.EventHandler(this.txtboxSobrenome_Leave);
             // 
             // txtboxEndereco
             // 
+            this.txtboxEndereco.ForeColor = System.Drawing.Color.Silver;
             this.txtboxEndereco.Location = new System.Drawing.Point(118, 69);
             this.txtboxEndereco.Name = "txtboxEndereco";
             this.txtboxEndereco.Size = new System.Drawing.Size(182, 20);
             this.txtboxEndereco.TabIndex = 9;
+            this.txtboxEndereco.Text = "Digite seu endereço...";
+            this.txtboxEndereco.Enter += new System.EventHandler(this.txtboxEndereco_Enter);
+            this.txtboxEndereco.Leave += new System.EventHandler(this.txtboxEndereco_Leave);
             // 
             // txtboxNumero
             // 
+            this.txtboxNumero.ForeColor = System.Drawing.Color.Silver;
             this.txtboxNumero.Location = new System.Drawing.Point(321, 69);
             this.txtboxNumero.Name = "txtboxNumero";
             this.txtboxNumero.Size = new System.Drawing.Size(65, 20);
             this.txtboxNumero.TabIndex = 10;
+            this.txtboxNumero.Text = "Nº";
+            this.txtboxNumero.Enter += new System.EventHandler(this.txtboxNumero_Enter);
+            this.txtboxNumero.Leave += new System.EventHandler(this.txtboxNumero_Leave);
             // 
             // txtboxUsuario
             // 
+            this.txtboxUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txtboxUsuario.Location = new System.Drawing.Point(118, 125);
             this.txtboxUsuario.Name = "txtboxUsuario";
             this.txtboxUsuario.Size = new System.Drawing.Size(131, 20);
             this.txtboxUsuario.TabIndex = 11;
+            this.txtboxUsuario.Text = "Digite seu usuário";
+            this.txtboxUsuario.Enter += new System.EventHandler(this.txtboxUsuario_Enter);
+            this.txtboxUsuario.Leave += new System.EventHandler(this.txtboxUsuario_Leave);
             // 
             // txtboxSenha
             // 
+            this.txtboxSenha.ForeColor = System.Drawing.Color.Silver;
             this.txtboxSenha.Location = new System.Drawing.Point(118, 151);
             this.txtboxSenha.Name = "txtboxSenha";
-            this.txtboxSenha.PasswordChar = '*';
             this.txtboxSenha.Size = new System.Drawing.Size(131, 20);
             this.txtboxSenha.TabIndex = 12;
+            this.txtboxSenha.Text = "Digite sua senha...";
+            this.txtboxSenha.Enter += new System.EventHandler(this.txtboxSenha_Enter);
+            this.txtboxSenha.Leave += new System.EventHandler(this.txtboxSenha_Leave);
             // 
             // txtboxConfirmSenha
             // 
+            this.txtboxConfirmSenha.ForeColor = System.Drawing.Color.Silver;
             this.txtboxConfirmSenha.Location = new System.Drawing.Point(118, 177);
             this.txtboxConfirmSenha.Name = "txtboxConfirmSenha";
-            this.txtboxConfirmSenha.PasswordChar = '*';
             this.txtboxConfirmSenha.Size = new System.Drawing.Size(131, 20);
             this.txtboxConfirmSenha.TabIndex = 13;
+            this.txtboxConfirmSenha.Text = "Confirme sua senha...";
+            this.txtboxConfirmSenha.Enter += new System.EventHandler(this.txtboxConfirmSenha_Enter);
+            this.txtboxConfirmSenha.Leave += new System.EventHandler(this.txtboxConfirmSenha_Leave);
             // 
             // dataNascimento
             // 
+            this.dataNascimento.CalendarTitleForeColor = System.Drawing.Color.Silver;
             this.dataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dataNascimento.Location = new System.Drawing.Point(118, 99);
             this.dataNascimento.Name = "dataNascimento";

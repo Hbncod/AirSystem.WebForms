@@ -111,21 +111,28 @@
             // 
             this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txtUsuario.Location = new System.Drawing.Point(389, 202);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(195, 20);
             this.txtUsuario.TabIndex = 5;
             this.txtUsuario.Tag = "";
+            this.txtUsuario.Text = "Digite seu usuário...";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtSenha
             // 
             this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSenha.ForeColor = System.Drawing.Color.Silver;
             this.txtSenha.Location = new System.Drawing.Point(389, 247);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(195, 20);
             this.txtSenha.TabIndex = 6;
+            this.txtSenha.Text = "Digite Sua Senha...";
+            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // comboIdiomas
             // 

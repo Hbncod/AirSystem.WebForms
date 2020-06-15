@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -83,6 +84,48 @@ namespace AirSystem
         private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "Digite seu usuário...")
+            {
+                txtUsuario.Text = "";
+
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtUsuario, "Digite seu usuário...");
+
+            //if (txtUsuario.Text == "")
+            //{
+              //  txtUsuario.Text = "Digite seu usuário...";
+
+                //txtUsuario.ForeColor = Color.Silver;
+            //}
+        }
+
+        private void txtSenha_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtSenha,"Digite Sua Senha...");
+            txtSenha.PasswordChar = '*';
+            //if (txtSenha.Text == "Digite Sua Senha...")
+            //{
+            //    txtSenha.Text = "";
+
+            //    txtSenha.ForeColor = Color.Black;
+            //    txtSenha.PasswordChar = '*';
+            //}
+
+        }
+
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtSenha, "Digite Sua Senha...");
+            
         }
     }
 }

@@ -35,9 +35,10 @@
             // dgvListarUsuarios
             // 
             this.dgvListarUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarUsuarios.Location = new System.Drawing.Point(62, 21);
+            this.dgvListarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListarUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dgvListarUsuarios.Name = "dgvListarUsuarios";
-            this.dgvListarUsuarios.Size = new System.Drawing.Size(517, 337);
+            this.dgvListarUsuarios.Size = new System.Drawing.Size(800, 450);
             this.dgvListarUsuarios.TabIndex = 0;
             this.dgvListarUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

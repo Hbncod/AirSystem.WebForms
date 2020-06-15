@@ -33,25 +33,27 @@ namespace AirSystem.Views
                 {
                     MessageBox.Show("O Campo \"Senha \" e o Campo \"Confirmar Senha\" Devem ser iguais", "Erro");
                 }
-
-                Usuario usuario = new Usuario
+                else
                 {
-                    Nome = txtboxNome.Text,
-                    Endereco = txtboxEndereco.Text,
-                    Numero = txtboxNumero.Text,
-                    DataNascimento = dataNascimento.Value,
-                    NomeUsuario = txtboxUsuario.Text,
-                    Sobrenome = txtboxSobrenome.Text,
-                    Senha = txtboxSenha.Text,
-                    TipoUsuario = checkAdm.Checked
-                };
-                usuariosRepository.Adicionar(usuario);
-                MessageBox.Show("Usuário Cadastrado com Sucesso", "Sucesso", MessageBoxButtons.OK);
-                new frmLogin().ShowDialog();
-                this.Close();
+                    Usuario usuario = new Usuario
+                    {
+                        Nome = txtboxNome.Text,
+                        Endereco = txtboxEndereco.Text,
+                        Numero = txtboxNumero.Text,
+                        DataNascimento = dataNascimento.Value,
+                        NomeUsuario = txtboxUsuario.Text,
+                        Sobrenome = txtboxSobrenome.Text,
+                        Senha = txtboxSenha.Text,
+                        TipoUsuario = checkAdm.Checked
+                    };
+                    usuariosRepository.Adicionar(usuario);
+                    MessageBox.Show("Usuário Cadastrado com Sucesso", "Sucesso", MessageBoxButtons.OK);
+                    new frmLogin().ShowDialog();
+                    this.Close();
+                }
             }
             else
-            {   
+            {
                 MessageBox.Show("Todos os campos são obrigatórios.",
                                    "Aviso", MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -79,6 +81,79 @@ namespace AirSystem.Views
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             picUsuario.Image = null;
+        }
+
+        private void txtboxNome_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxNome, "Digite seu nome...");
+        }
+
+        private void txtboxSobrenome_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxSobrenome, "Digite seu sobrenome...");
+        }
+
+        private void txtboxNome_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxNome, "Digite seu nome...");
+        }
+
+        private void txtboxSobrenome_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxSobrenome, "Digite seu sobrenome...");
+        }
+
+        private void txtboxEndereco_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxEndereco, "Digite seu endereço...");
+        }
+
+        private void txtboxEndereco_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxEndereco, "Digite seu endereço...");
+        }
+
+        private void txtboxNumero_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxNumero, "Nº");
+        }
+
+        private void txtboxNumero_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxNumero, "Nº");
+        }
+
+        private void txtboxUsuario_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxUsuario, "Digite seu usuário");
+        }
+
+        private void txtboxUsuario_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxUsuario, "Digite seu usuário");
+        }
+
+        private void txtboxSenha_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxSenha, "Digite sua senha...");
+            txtboxSenha.PasswordChar = '*';
+        }
+
+        private void txtboxSenha_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxSenha, "Digite sua senha...");
+            
+        }
+
+        private void txtboxConfirmSenha_Enter(object sender, EventArgs e)
+        {
+            Utils.EnterPlaceHolder(txtboxConfirmSenha, "Confirme sua senha...");
+            txtboxConfirmSenha.PasswordChar = '*';
+        }
+
+        private void txtboxConfirmSenha_Leave(object sender, EventArgs e)
+        {
+            Utils.LeavePlaceHolder(txtboxConfirmSenha, "Confirme sua senha...");
         }
     }
 }
