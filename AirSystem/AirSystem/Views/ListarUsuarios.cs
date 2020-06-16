@@ -37,8 +37,7 @@ namespace AirSystem.Views
             {
                 Idioma.AjustaCultura(this, "pt");
             }
-            dgvListarUsuarios.DataSource = null;
-            dgvListarUsuarios.DataSource = usuarioRepository.BuscarTodos();
+            carregaLista();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,6 +60,7 @@ namespace AirSystem.Views
             );
             alterarContador();
         }
+        
 
         private void dgvListarUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -102,10 +102,24 @@ namespace AirSystem.Views
             };
             usuarioRepository.editar(NovosDados);
             MessageBox.Show("Dados editados com sucesso", "Sucesso");
-            dgvListarUsuarios.DataSource = null;
-            dgvListarUsuarios.DataSource = usuarioRepository.BuscarTodos();
+            carregaLista();
             
                 
+        }
+        private void carregaLista()
+        {
+            dgvListarUsuarios.DataSource = null;
+            dgvListarUsuarios.DataSource = usuarioRepository.BuscarTodos();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Deseja deletar este usuário?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                usuarioRepository.Deletar(u.Id);
+                carregaLista();
+            }
         }
     }
 }

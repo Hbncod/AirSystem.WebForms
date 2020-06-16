@@ -56,7 +56,11 @@ namespace AirSystem.Repositories
             Usuario u = BuscarPorId(usuario.Id);
             Usuarios[Usuarios.IndexOf(u)] = usuario;
         }
-    
+        public void Deletar(int id)
+        {
+            Usuario u = BuscarPorId(id);
+            Usuarios.Remove(u);
+        }
         public void Adicionar(Usuario usuario)
         {
             Usuarios.Add(usuario);
