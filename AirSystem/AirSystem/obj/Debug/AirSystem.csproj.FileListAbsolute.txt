@@ -26,3 +26,14 @@ C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.csproj.CoreCompileInputs.cache
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.exe
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.pdb
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\bin\Debug\en\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.en.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\en\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\bin\Debug\pt\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.pt.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\pt\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.frmLogin.en.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.frmLogin.pt.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\bin\Debug\fr\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.fr.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\fr\AirSystem.resources.dll

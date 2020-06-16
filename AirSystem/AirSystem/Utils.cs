@@ -29,22 +29,22 @@ namespace AirSystem
                 txt.PasswordChar = '\0';
             }
         }
-        public static bool temCamposVazio(Form form)
+        /* public static bool temcamposvazio(form form)
         {
-            //varrer os objeos do formulário
-            foreach (Control c in form.Controls)
+            varrer os objeos do formulário
+            foreach (control c in form.controls)
             {
-                //guardar as caixas de texto
-                TextBox tbx = c as TextBox;
-                //verificar se estão preenchidas
-                if (tbx.ForeColor == Color.Silver)
+                guardar as caixas de texto
+                textbox tbx = c as textbox;
+                verificar se estão preenchidas
+                if (tbx.text.trim().length == 0 && tbx.forecolor == color.silver)
                 {
-                    //retorna que tem campos vazios
+                    retorna que tem campos vazios
                     return true;
                 }
             }
-            //retornar que Não tem campos vazios
+            retornar que não tem campos vazios
             return false;
-        }
+        } */
     }
 }

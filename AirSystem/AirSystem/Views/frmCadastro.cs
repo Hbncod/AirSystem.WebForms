@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,9 +28,33 @@ namespace AirSystem.Views
         private void button3_Click(object sender, EventArgs e)
         {
             UsuariosRepository usuariosRepository = new UsuariosRepository();
-            if (!Utils.temCamposVazio(this))
+            Regex senha = new Regex(
+                @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$", RegexOptions.IgnorePatternWhitespace);
+            if(txtboxNome.Text.Trim().Length != 0 && txtboxNome.ForeColor != Color.Black)
             {
-                if (txtboxConfirmSenha.Text != txtboxSenha.Text)
+                MessageBox.Show("o campo \"Nome\" é obrigatório", "Campo não preenchido");
+            }
+            else if (txtboxSobrenome.Text.Trim().Length != 0 && txtboxSobrenome.ForeColor != Color.Black)
+            {
+                MessageBox.Show("o campo \"Sobrenome\" é obrigatório", "Campo não preenchido");
+            }
+            else if(txtboxUsuario.Text.Trim().Length != 0 && txtboxUsuario.ForeColor != Color.Black)
+            {
+                MessageBox.Show("o campo \"Usuário\" é obrigatório", "Campo não preenchido");
+            }
+            else if(txtboxSenha.Text.Trim().Length != 0 && txtboxSenha.ForeColor != Color.Black)
+            {
+                MessageBox.Show("o campo \"Senha\" é obrigatório", "Campo não preenchido");
+            }
+            else if(txtboxConfirmSenha.Text.Trim().Length != 0 && txtboxConfirmSenha.ForeColor != Color.Black)
+            {
+                MessageBox.Show("o campo \"Confirmar senha\" é obrigatório", "Campo não preenchido");
+            }
+            else if (!senha.IsMatch(txtboxSenha.Text))
+            {
+                MessageBox.Show("O Campo \"Senha \" é inválido, A senha deve ter pelo menos 8 caracteres – pelo menos 1 letra maiúscula, 1 letra minúscula e um número.", "Senha inválida");
+            }
+            else if(txtboxConfirmSenha.Text != txtboxSenha.Text)
                 {
                     MessageBox.Show("O Campo \"Senha \" e o Campo \"Confirmar Senha\" Devem ser iguais", "Erro");
                 }
@@ -51,13 +76,6 @@ namespace AirSystem.Views
                     new frmLogin().ShowDialog();
                     this.Close();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Todos os campos são obrigatórios.",
-                                   "Aviso", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-            }
         }
 
         private void btnSelecionar_Click(object sender, EventArgs e)
@@ -75,6 +93,14 @@ namespace AirSystem.Views
 
         private void frmCadastro_Load(object sender, EventArgs e)
         {
+            if (frmLogin.idioma == 0)
+            {
+                Idioma.AjustaCultura(this, "en");
+            }
+            else 
+            {
+                Idioma.AjustaCultura(this, "pt");
+            }
             
         }
 
@@ -154,6 +180,11 @@ namespace AirSystem.Views
         private void txtboxConfirmSenha_Leave(object sender, EventArgs e)
         {
             Utils.LeavePlaceHolder(txtboxConfirmSenha, "Confirme sua senha...");
+        }
+
+        private void txtboxNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

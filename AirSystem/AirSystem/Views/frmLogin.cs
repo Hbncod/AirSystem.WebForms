@@ -16,6 +16,7 @@ namespace AirSystem
 {
     public partial class frmLogin : Form
     {
+        public static int idioma = -1;
         UsuariosRepository usuariosRepository = new UsuariosRepository();
         public frmLogin()
         {
@@ -24,9 +25,6 @@ namespace AirSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboIdiomas.Items.Add("Português Pt-Br");
-            comboIdiomas.Items.Add("Inglês");
-            lblHora.Text = DateTime.Now.ToString("HH:MM:ss");
         }
 
 
@@ -52,33 +50,32 @@ namespace AirSystem
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (!Utils.temCamposVazio(this))
+            
+            Usuario usuario = usuariosRepository.Login(txtUsuario.Text, txtSenha.Text);
+            if (txtUsuario.Text.Trim().Length != 0 && txtUsuario.ForeColor != Color.Black)// 
             {
-                Usuario usuario = usuariosRepository.Login(txtUsuario.Text, txtSenha.Text);
-                if (usuario != null)
+                MessageBox.Show("o campo \"Usuario\" é obrigatório", "Campo não preenchido");
+            }
+            else if (txtSenha.Text.Trim().Length != 0 && txtSenha.ForeColor != Color.Black)
+            {
+                MessageBox.Show("o campo \"Senha\" é obrigatório", "Campo não preenchido");
+            }
+            else if (usuario != null)
+            {
+                if (usuario.TipoUsuario)
                 {
-                    if (usuario.TipoUsuario)
-                    {
-                        new TelaPrincipalAdm().ShowDialog();
-                    }
-                    else
-                    {
-                        new TelaPrincipalComum().ShowDialog();
-                    }
-                    
+                    new TelaPrincipalAdm().ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario ou Senha Incorretos", "Usuario não encontrado");
+                    new TelaPrincipalComum().ShowDialog();
                 }
             }
             else
             {
-                MessageBox.Show("Todos os campos são obrigatórios.",
-                                       "Aviso", MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                MessageBox.Show("Usuario ou Senha Incorretos", "Usuario não encontrado");
             }
-
+            
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
@@ -88,18 +85,13 @@ namespace AirSystem
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Digite seu usuário...")
-            {
-                txtUsuario.Text = "";
-
-                txtUsuario.ForeColor = Color.Black;
-            }
+            Utils.EnterPlaceHolder(txtUsuario, "Digite seu usuário...");
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            Utils.LeavePlaceHolder(txtUsuario, "Digite seu usuário...");
-
+                Utils.LeavePlaceHolder(txtUsuario, "Digite seu usuário...");
+            
             //if (txtUsuario.Text == "")
             //{
               //  txtUsuario.Text = "Digite seu usuário...";
@@ -110,8 +102,10 @@ namespace AirSystem
 
         private void txtSenha_Enter(object sender, EventArgs e)
         {
-            Utils.EnterPlaceHolder(txtSenha,"Digite Sua Senha...");
+            
             txtSenha.PasswordChar = '*';
+            Utils.EnterPlaceHolder(txtSenha, "Digite Sua Senha...");
+
             //if (txtSenha.Text == "Digite Sua Senha...")
             //{
             //    txtSenha.Text = "";
@@ -124,8 +118,42 @@ namespace AirSystem
 
         private void txtSenha_Leave(object sender, EventArgs e)
         {
-            Utils.LeavePlaceHolder(txtSenha, "Digite Sua Senha...");
             
+            Utils.LeavePlaceHolder(txtSenha, "Digite Sua Senha...");
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss:fff");
+        }
+
+        private void comboIdiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idioma = comboIdiomas.SelectedIndex;
+            if (idioma == 0)
+            {
+                Idioma.AjustaCultura(this, "en");
+                txtSenha.PasswordChar = '\0';
+                txtSenha.ForeColor = Color.Silver;
+                txtUsuario.ForeColor = Color.Silver;
+            }
+            else
+            {
+                Idioma.AjustaCultura(this, "pt");
+                txtSenha.PasswordChar = '\0';
+                txtSenha.ForeColor = Color.Silver;
+                txtUsuario.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
