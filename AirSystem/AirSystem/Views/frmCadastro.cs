@@ -15,6 +15,8 @@ namespace AirSystem.Views
 {
     public partial class frmCadastro : Form
     {
+        UsuariosRepository usuariosRepository = new UsuariosRepository();
+        private Usuario usuario = null;
         public frmCadastro()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace AirSystem.Views
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UsuariosRepository usuariosRepository = new UsuariosRepository();
+            
             Regex senha = new Regex(
                 @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$", RegexOptions.IgnorePatternWhitespace);
             if(txtboxNome.Text.Trim().Length != 0 && txtboxNome.ForeColor != Color.Black)

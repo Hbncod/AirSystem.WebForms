@@ -22,5 +22,17 @@ namespace AirSystem.Views
             new ListarUsuarios().ShowDialog();
             this.Close();
         }
+
+        private void TelaPrincipalComum_Load(object sender, EventArgs e)
+        {
+            if (frmLogin.idioma == 0)
+            {
+                Idioma.AjustaCultura(this, "en");
+            }
+            else
+            {
+                Idioma.AjustaCultura(this, "pt");
+            }
+        }
     }
 }

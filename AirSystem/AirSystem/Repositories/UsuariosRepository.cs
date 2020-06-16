@@ -28,6 +28,7 @@ namespace AirSystem.Repositories
                     Senha = "adm",
                     TipoUsuario = true // logo é adm
                 });
+                
                 Usuarios.Add(new Usuario
                 {
                     Nome = "Rafael",
@@ -42,11 +43,20 @@ namespace AirSystem.Repositories
 
             }
         }
-
+        public Usuario BuscarPorId(int id)
+        {
+            return Usuarios.FirstOrDefault(u => u.Id == id);
+        }
         public List<Usuario> BuscarTodos()
         {
             return Usuarios;
         }
+        public void editar(Usuario usuario)
+        {
+            Usuario u = BuscarPorId(usuario.Id);
+            Usuarios[Usuarios.IndexOf(u)] = usuario;
+        }
+    
         public void Adicionar(Usuario usuario)
         {
             Usuarios.Add(usuario);

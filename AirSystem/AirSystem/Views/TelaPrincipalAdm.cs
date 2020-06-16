@@ -19,7 +19,14 @@ namespace AirSystem.Views
 
         private void TelaPrincipalAdm_Load(object sender, EventArgs e)
         {
-
+            if (frmLogin.idioma == 0)
+            {
+                Idioma.AjustaCultura(this, "en");
+            }
+            else
+            {
+                Idioma.AjustaCultura(this, "pt");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

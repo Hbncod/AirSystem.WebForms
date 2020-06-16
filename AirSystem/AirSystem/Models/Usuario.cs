@@ -23,7 +23,7 @@ namespace AirSystem.Models
         public string NomeUsuario { get; set; }
         public bool TipoUsuario { get; set; }
 
-        private static int contador = 1; 
+        public static int contador = 1; 
         public Usuario()
         {
             Id = contador;

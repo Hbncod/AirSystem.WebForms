@@ -114,11 +114,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ListarUsuarios.en.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TelaPrincipalAdm.en.resx">
+      <DependentUpon>TelaPrincipalAdm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaPrincipalAdm.resx">
       <DependentUpon>TelaPrincipalAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TelaPrincipalComum.en.resx">
+      <DependentUpon>TelaPrincipalComum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TelaPrincipalComum.resx">
       <DependentUpon>TelaPrincipalComum.cs</DependentUpon>

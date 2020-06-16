@@ -37,3 +37,6 @@ C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\bin\Debug\fr\AirSystem.resources.dll
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.fr.resources
 C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\fr\AirSystem.resources.dll
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.ListarUsuarios.en.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.TelaPrincipalAdm.en.resources
+C:\Users\HENRIQUE\Documents\windowsforms\AirSystem.WebForms\AirSystem\AirSystem\obj\Debug\AirSystem.Views.TelaPrincipalComum.en.resources
